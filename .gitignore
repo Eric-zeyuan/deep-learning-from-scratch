@@ -1,0 +1,31 @@
+# Datasets
+*.gz
+*.zip
+dataset/MNIST/train-*
+dataset/MNIST/t10k-*
+
+# Model weights
+*.pickle
+
+# Results and outputs
+results/
+best_models/
+saved_models/
+test_tmp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Temporary
+*.log
+idx.pickle
+
+# System
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
