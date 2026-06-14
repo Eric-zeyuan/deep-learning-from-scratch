@@ -1,0 +1,28 @@
+# Model weights (too large for git, upload to Google Drive)
+*.pth
+
+# Python
+__pycache__/
+*.pyc
+
+# Dataset (auto-downloaded by torchvision)
+codes/data/cifar-10-*
+codes/VGG_BatchNorm/data/cifar-10-*
+
+# Run logs
+*.log
+
+# LaTeX aux files
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store

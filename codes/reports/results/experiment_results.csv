@@ -1,0 +1,9 @@
+name,model,optimizer,lr,weight_decay,augmentation,epochs,parameters,best_val_acc,best_epoch,final_train_loss,note
+01_baseline_VGG_A,VGG_A,adam,0.001,0,False,8,9750922,0.7686,7,0.21444154336400653,Baseline: plain VGG-A
+02_add_BN,VGG_A_BatchNorm,adam,0.001,0,False,8,9758474,0.8484,7,0.018281874700647106,+ BatchNorm
+03_add_Dropout,VGG_A_Dropout,adam,0.001,0,False,8,9750922,0.7321,7,0.3632055311023122,+ Dropout (no BN)
+04_BN_Dropout,VGG_A_BN_Dropout,adam,0.001,0,False,8,9758474,0.8443,7,0.0517828967255514,+ BatchNorm + Dropout
+05_BN_Dropout_Aug,VGG_A_BN_Dropout,adam,0.001,0,True,8,9758474,0.8477,7,0.39959907322131155,+ Data augmentation (Flip + Crop)
+06_SGD_momentum,VGG_A_BN_Dropout,sgd,0.01,0.0005,True,8,9758474,0.8229,7,0.4731784348597612,SGD + momentum=0.9 (different optimizer)
+07_AdamW_wd,VGG_A_BN_Dropout,adamw,0.001,0.0005,True,8,9758474,0.8467,7,0.3987640196176441,AdamW + weight_decay=5e-4 (loss regularization)
+08_GELU_activation,VGG_A_BN_Dropout,adam,0.001,0,True,8,9758474,0.8477,7,0.39959907322131155,Different activation comparison — see report for GELU variant
